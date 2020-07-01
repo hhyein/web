@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>travel</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    var result = this.responseText;
+
+                    $(result).find('item').each(function(){
+                      $('#content').append('<h3>'+$(this).find('title').text()+'</h3>');
+                      $('#content').append('<p>'+$(this).find('addr1').text()+'</p>');
+                      $('#content').append('<img width=500px height=300px src="'+$(this).find('firstimage').text()+'"</img><br>');
+                    });
+                }
+            };
+            xmlhttp.open("GET","http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?ServiceKey=bq6YPTFfpPwcqBSmOZ55XgiOpoXd3yc7ScFpY%2FFIZDZ6j%2BqccWjvzOdHrX%2BBLHCK%2BCizOJgIxisZS0pqFebAgQ%3D%3D&contentTypeId=&areaCode=1&sigunguCode=&cat1=&cat2=&cat3=&listYN=Y&MobileOS=ETC&MobileApp=TourAPI3.0_Guide&arrange=B&numOfRows=12&pageNo=1");
+            xmlhttp.send();
+        });
+    </script>
+</head>
+<body>
+  <h1>서울 인기 관광정보</h1>
+    <div id="content"></div>
+</body>
+</html>
