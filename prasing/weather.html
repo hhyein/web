@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>weather</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script>
+      function select(element){
+        <!-- 출력 초기화 -->
+        $('#city').empty();
+        $('#weather').empty();
+
+        <!-- 버튼 텍스트 저장 -->
+        var select = element.textContent;
+
+        $(document).ready(function(){
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    var result = this.responseText;
+
+                    <!-- location 태그 내 city 태그 텍스트 저장 -->
+                    $(result).find('location').each(function(){
+                      var city = $(this).find("city").text();
+
+                      if(city == select){
+                        $('#city').append(city+'<br>');
+                        <!-- data 태그 내 tmEf, wf 태그 텍스트 저장 -->
+                        $(this).find('data').each(function(){
+                          var weather = $(this).find('tmEf').text()+' '+$(this).find('wf').text();
+                          $('#weather').append(weather+'<br>');
+                        })
+                      }
+                    })
+                }
+            };
+            xmlhttp.open("GET","http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=108");
+            xmlhttp.send();
+        });
+      }
+    </script>
+</head>
+<body>
+  <button onclick="select(this)">서울</button>
+  <button onclick="select(this)">인천</button>
+  <button onclick="select(this)">수원</button>
+  <button onclick="select(this)">파주</button>
+  <button onclick="select(this)">춘천</button>
+  <button onclick="select(this)">원주</button>
+  <button onclick="select(this)">강릉</button>
+  <button onclick="select(this)">청주</button>
+  <button onclick="select(this)">대전</button>
+  <button onclick="select(this)">서산</button>
+  <button onclick="select(this)">세종</button>
+  <button onclick="select(this)">전주</button>
+  <button onclick="select(this)">군산</button>
+  <button onclick="select(this)">광주</button>
+  <button onclick="select(this)">목포</button>
+  <button onclick="select(this)">여수</button>
+  <button onclick="select(this)">대구</button>
+  <button onclick="select(this)">안동</button>
+  <button onclick="select(this)">포항</button>
+  <button onclick="select(this)">부산</button>
+  <button onclick="select(this)">울산</button>
+  <button onclick="select(this)">창원</button>
+  <button onclick="select(this)">제주</button>
+  <button onclick="select(this)">서귀포</button>
+  <br>
+  <p id="city"></p>
+  <p id="weather"></p>
+</body>
+</html>
