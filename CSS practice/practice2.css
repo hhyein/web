@@ -1,0 +1,23 @@
+header {
+  color: white;
+  background-color: #666666;
+  text-align: center;
+}
+
+nav{
+  font-size: 150%;
+  font-family: Arial;
+}
+
+h2{
+  color:#666666;
+  background-color: #00B7EA;
+}
+
+details ul{
+  font-style:italic;
+}
+
+footer{
+  background-color:#666666;
+}

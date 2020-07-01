@@ -1,0 +1,17 @@
+li{
+  font-family:"Courier";
+}
+section{
+  width:50%;
+  height:30%;
+}
+h1{
+  color:white;
+  background-color:#5F5F5F;
+  text-align:center;
+  font-variant:small-caps;
+}
+p span{
+  color:#DC082F;
+  background-color:#F1F1F1;
+}

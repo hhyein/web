@@ -1,0 +1,168 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: '나눔 고딕','NanumGothic','맑은 고딕', 'Gothic';
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+
+body{
+  width : 960px;
+  background-color: #E6E6E6;
+}
+
+#page-wrapper{
+  background-color: #FFFFFF;
+  margin-top : 40px;
+  margin-right : 0px;
+  margin-bottom : 40px;
+  margin-left : 0px;
+
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+
+  border-radius : 5px;
+  box-shadow: 0px 2px 6px rgba(100,100,100,0.3);
+}
+
+#main-header{
+  padding-top: 40px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+}
+
+.master-title{
+  font-size: 30px;
+  color: #181818;
+}
+
+.master-description{
+  font-size: 15px;
+  color: #383838;
+  font-weight: 500;
+}
+
+#main-navigation{
+  border-top: 1px solid #C8C8C8;
+  border-bottom: 1px solid #C8C8C8;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-left:0px;
+  height: 40px;
+}
+
+.outer-menu-item{
+  float:left;
+}
+
+.menu-title{
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  color : #000000;
+}
+
+.menu-title:hover{
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.menu-title:active{
+  color: #FFF000;
+}
+
+#content{
+  overflow : hidden;
+}
+
+#main-section{
+  float: left;
+  width: 710px;
+
+}
+
+#main-aside{
+  float: right;
+  width: 200px;
+}
+
+article{
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  border-top: 1px solid #C8C8C8;
+  border-bottom: 1px solid #C8C8C8;
+}
+
+.article-header{
+  padding-top: 20px;
+  padding-right: 0px;
+  padding-bottom: 20px;
+  padding-left: 0px;
+}
+
+.article-title{
+  font-size: 25px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  font-weight: 500;
+}
+
+.article-data{
+  font-size: 13px;
+}
+
+.article-body{
+  font-size: 14px;
+}
+
+img[src*="Sejong_mark.png"]{
+  width: 280px;
+  height: 280px;
+}
+img[src*="Datascience.jpg"]{
+  width: 430px;
+  height: 280px;
+}
+
+.aside-list{
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-bottom: 30px;
+  padding-left: 0px;
+}
+
+aside h3{
+  font-size : 15px;
+  font-weight: 600;
+}
+
+aside a{
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left:8px;
+  font-size : 13px;
+  color : #C6C6C6;
+}
+
+footer{
+  font-size : 10px;
+  color : #666666;
+}
